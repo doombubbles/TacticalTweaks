@@ -15,6 +15,8 @@ public class AutoCollectBanks : ToggleableTweak
 
     public override void OnNewGameModel(GameModel gameModel)
     {
+        if (!Enabled) return;
+
         foreach (var towerModel in gameModel.GetTowersWithBaseId(TowerType.BananaFarm).AsIEnumerable())
         {
             if (towerModel.HasBehavior(out BankModel bankModel))

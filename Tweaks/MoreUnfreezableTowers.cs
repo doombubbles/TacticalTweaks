@@ -1,10 +1,8 @@
 ﻿using BTD_Mod_Helper.Api.Enums;
 using HarmonyLib;
 using Il2CppAssets.Scripts;
-using Il2CppAssets.Scripts.Models;
 using Il2CppAssets.Scripts.Models.Towers;
 using Il2CppAssets.Scripts.Simulation.SimulationBehaviors;
-using Il2CppAssets.Scripts.Simulation.Towers.TowerFilters;
 
 namespace TacticalTweaks.Tweaks;
 
@@ -38,17 +36,6 @@ public class MoreUnfreezableTowers : ToggleableTweak
                    towerModel.appliedUpgrades?.Contains(UpgradeType.TheBlazingSun) != true &&
                    towerModel.baseId != TowerType.Gwendolin &&
                    tower.towerSkinName != "Fusty the Snowman";
-        }
-    }
-
-    [HarmonyPatch(typeof(PyrotechnicsSupportFilter), nameof(PyrotechnicsSupportFilter.FilterTowerModel))]
-    internal static class PyrotechnicsSupportFilter_FilterTowerModel
-    {
-        [HarmonyPostfix]
-        internal static void Postfix(TowerModel towerModel, ref bool __result)
-        {
-            __result |= towerModel.baseId == TowerType.Desperado &&
-                        towerModel.appliedUpgrades?.Contains(UpgradeType.TheBlazingSun) == true;
         }
     }
 }

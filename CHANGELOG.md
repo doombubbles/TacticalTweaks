@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+- Fixed a few Tweaks that weren't correctly reading their Enabled state from settings
+- Separated into its own tweak:  More Pyrotechnics Towers (Default On)
+  - Expands the towers affected by Gwen's Pyrotechnics Support buff. Currently just adds The Blazing Sun Desperado.
+- Fixed a couple typos
+
 ## [1.2.2] - 2026-06-24
 
 - Fixed Pursuit Path Prioritization overriding the buttons for Lock in Place and Patrol Points

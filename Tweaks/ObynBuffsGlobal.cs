@@ -17,6 +17,8 @@ public class ObynBuffsGlobal : ToggleableTweak
 
     public override void OnNewGameModel(GameModel gameModel)
     {
+        if (!Enabled) return;
+
         foreach (var towerModel in gameModel.GetTowersWithBaseId(TowerType.ObynGreenfoot).AsIEnumerable())
         {
             foreach (var supportModel in towerModel.GetBehaviors<SupportModel>())

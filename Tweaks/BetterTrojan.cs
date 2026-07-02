@@ -32,9 +32,10 @@ public class BetterTrojan : ToggleableTweak
         }
 
         [HarmonyPostfix]
-        internal static void Postfix(Model model, ref int __state)
+        internal static void Postfix(Model model, Model baseModel, ref int __state)
         {
-            if (!GetInstance<BetterTrojan>().Enabled || !model.Is(out BloonModel bloonModel)) return;
+            if (!GetInstance<BetterTrojan>().Enabled || !model.Is(out BloonModel bloonModel) ||
+                !baseModel.Is<BloonModel>()) return;
             bloonModel.layerNumber = __state;
         }
     }

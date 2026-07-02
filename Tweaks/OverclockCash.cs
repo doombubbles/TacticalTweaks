@@ -10,7 +10,7 @@ using Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors;
 
 namespace TacticalTweaks.Tweaks;
 
-public class OverlockCash : ToggleableTweak
+public class OverclockCash : ToggleableTweak
 {
     protected override bool DefaultEnabled => true;
 
@@ -58,7 +58,7 @@ public class OverlockCash : ToggleableTweak
         [HarmonyPostfix]
         internal static void Postfix(OverclockModel.OverclockMutator __instance, Model model)
         {
-            if (!GetInstance<OverlockCash>().Enabled || !model.Is(out TowerModel towerModel)) return;
+            if (!GetInstance<OverclockCash>().Enabled || !model.Is(out TowerModel towerModel)) return;
 
             var rateModifier = __instance.overclockModel.rateModifier;
 
@@ -73,7 +73,7 @@ public class OverlockCash : ToggleableTweak
         [HarmonyPostfix]
         internal static void Postfix(OverclockPermanentModel.OverclockPermanentMutator __instance, Model model)
         {
-            if (!GetInstance<OverlockCash>().Enabled || !model.Is(out TowerModel towerModel)) return;
+            if (!GetInstance<OverclockCash>().Enabled || !model.Is(out TowerModel towerModel)) return;
 
             var rateModifier = 1 - __instance.stacks * (1 - __instance.overclockPermanentModel.rateModifier);
 

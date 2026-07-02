@@ -16,6 +16,8 @@ public class ObynPriceTweak : ToggleableTweak
 
     public override void OnNewGameModel(GameModel gameModel)
     {
+        if (!Enabled) return;
+
         var sauda = gameModel.GetTowerWithName(TowerType.Sauda);
         foreach (var towerModel in gameModel.GetTowersWithBaseId(TowerType.ObynGreenfoot).AsIEnumerable())
         {

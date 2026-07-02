@@ -18,6 +18,8 @@ public class BetterArmorPiercingDarts : ToggleableTweak
 
     public override void OnNewGameModel(GameModel gameModel)
     {
+        if (!Enabled) return;
+
         foreach (var towerModel in gameModel.GetTowersWithBaseId(TowerType.MonkeySub)
                      .AsIEnumerable()
                      .Where(model => model.appliedUpgrades.Contains(UpgradeType.ArmorPiercingDarts)))

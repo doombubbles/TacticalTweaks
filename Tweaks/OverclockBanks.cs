@@ -46,7 +46,7 @@ public class OverclockBanks : ToggleableTweak
         [HarmonyPostfix]
         internal static void Postfix(OverclockPermanentModel.OverclockPermanentMutator __instance, Model model)
         {
-            if (!GetInstance<OverclockMonkeyopolis>().Enabled || !model.Is(out TowerModel towerModel)) return;
+            if (!GetInstance<OverclockBanks>().Enabled || !model.Is(out TowerModel towerModel)) return;
 
             var rateModifier = 1 - __instance.stacks * (1 - __instance.overclockPermanentModel.rateModifier);
 

@@ -17,10 +17,10 @@ public class AutoBloonTrapRetarget : TacticalTweak
         Constantly
     }
 
-    private static readonly ModSettingEnum<TrapRetargetSetting> AutoTrapRetarget = new(TrapRetargetSetting.Off)
+    private static readonly ModSettingEnum<TrapRetargetSetting> AutoTrapRetarget = new(TrapRetargetSetting.StartOfRound)
     {
         icon = VanillaSprites.BloonTrapUpgradeIcon,
-        description = "For Engineers with with Bloon Trap and Larger Service Area, " +
+        description = "For Engineers with Bloon Trap and Larger Service Area, " +
                       "traps will now be automatically retargeted on the same spot to refresh them."
     };
 
@@ -31,7 +31,7 @@ public class AutoBloonTrapRetarget : TacticalTweak
         internal static void Postfix(Simulation __instance)
         {
             if (AutoTrapRetarget != TrapRetargetSetting.StartOfRound) return;
-            
+
             __instance.factory.GetUncast<TargetSelectedPoint>().ForEach(point =>
             {
                 if (point.attack.model.name.Contains("BloonTrap") && point.HasValidPoint)

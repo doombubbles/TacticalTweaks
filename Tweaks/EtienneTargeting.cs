@@ -12,7 +12,7 @@ public class EtienneTargeting : ToggleableTweak
     protected override bool DefaultEnabled => false;
 
     public override string Description =>
-        "Replaces Etienne's targeting options with the standard Fist, Last, Close Strong.";
+        "Replaces Etienne's targeting options with the standard First, Last, Close Strong.";
 
     protected override string Icon => VanillaSprites.EtienneIcon;
 

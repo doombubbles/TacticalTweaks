@@ -26,7 +26,7 @@ Incorporates a few things ported from Useful Utilities, a few of my old mods, an
 - Elite Defender Target Switch (Default Off)
   - An Elite Defender will switch to First targeting after a Bloon leak activates its ability.
 - Etienne Targeting (Default Off)
-  - Replaces Etienne's targeting options with the standard Fist, Last, Close, Strong.
+  - Replaces Etienne's targeting options with the standard First, Last, Close, Strong.
 - Sticky Bomb Attack Speed (Default Off)
   - Makes attack speed buffs cause Sticky Bombs to blow up quicker. (Also affects Master Bomber)
 - Better Laser Blasts (Default Off)
@@ -48,7 +48,7 @@ Incorporates a few things ported from Useful Utilities, a few of my old mods, an
 - More Overclock Interactions (All Default On)
   - Overclock Cash - Makes the Overclock buff increase other forms of cash generation for towers such as from end of round or from abilities.
   - Overclock Banks - Makes the Overclock buff affect the interest rates of Monkey Banks.
-  - Overlock Monkeyopolis - Makes the Overclock buff affect Monkeyopolis income in the same way it affects Banana Farms.
+  - Overclock Monkeyopolis - Makes the Overclock buff affect Monkeyopolis income in the same way it affects Banana Farms.
   - Overclock Periodic Abilities - Makes the Overclock buff affect the frequency of periodic ability activations like Carpet of Spikes.
 - Periodic Ability Cooldown Reduction (Default On)
   - Makes ability cooldown reduction effects also apply to periodically activated abilities like Carpet of Spikes.
@@ -62,6 +62,8 @@ Incorporates a few things ported from Useful Utilities, a few of my old mods, an
     - Dragon's Breath Wizards
     - Signal Flare Mortar Monkeys
     - Tidal Chill Mermonkeys
+- More Pyrotechnics Towers (Default On)
+  - Expands the towers affected by Gwen's Pyrotechnics Support buff. Currently just adds The Blazing Sun Desperado.
 
 ### Ported from Useful Utilities
 
