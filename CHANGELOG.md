@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [1.2.3] - 2026-07-02
+
 - Fixed a few Tweaks that weren't correctly reading their Enabled state from settings
 - Separated into its own tweak:  More Pyrotechnics Towers (Default On)
   - Expands the towers affected by Gwen's Pyrotechnics Support buff. Currently just adds The Blazing Sun Desperado.
@@ -107,5 +109,6 @@ All notable changes to this project will be documented in this file.
 [1.0.1]: https://github.com/doombubbles/tactical-tweaks/compare/1.0.0...1.0.1
 [1.0.0]: https://github.com/doombubbles/tactical-tweaks/compare/1.0.0...1.0.0
 
-[unreleased]: https://github.com/doombubbles/tactical-tweaks/compare/1.2.2...HEAD
+[unreleased]: https://github.com/doombubbles/TacticalTweaks/compare/1.2.3...HEAD
+[1.2.3]: https://github.com/doombubbles/TacticalTweaks/compare/1.2.1...1.2.3
 [1.2.2]: https://github.com/doombubbles/tactical-tweaks/compare/39888dc031451b066b2f9e6a54ee6cb6500ef986...1.2.2
