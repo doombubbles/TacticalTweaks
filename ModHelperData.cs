@@ -2,8 +2,8 @@ namespace TacticalTweaks;
 
 public static class ModHelperData
 {
-    public const string WorksOnVersion = "55.2";
-    public const string Version = "1.2.3";
+    public const string WorksOnVersion = "56.0";
+    public const string Version = "1.2.4";
     public const string Name = "Tactical Tweaks";
 
     public const string Description =

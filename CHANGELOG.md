@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+- Fixed for BTD6 v56
+
 ## [1.2.3] - 2026-07-02
 
 - Fixed a few Tweaks that weren't correctly reading their Enabled state from settings

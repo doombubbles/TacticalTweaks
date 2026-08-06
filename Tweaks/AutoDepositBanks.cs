@@ -34,7 +34,7 @@ public class AutoDepositBanks : ToggleableTweak
                 !__instance.tower.towerModel.HasBehavior<BankDepositsModel>() ||
                 __state < __instance.bankModel.capacity) return;
 
-            __instance.Sim.RemoveCash(__state / 2, Simulation.CashType.Ability, InGame.Bridge.MyPlayerNumber,
+            __instance.Sim.RemoveCash(__state / 2, Simulation.CashType.Ability, InGame.Bridge.GetInputId(),
                 Simulation.CashSource.BankDeposit);
             __instance.DepositCash(__state / 2);
         }

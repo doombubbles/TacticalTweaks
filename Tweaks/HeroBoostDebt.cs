@@ -50,7 +50,8 @@ public class HeroBoostDebt : ToggleableTweak
                 $"Do you want to boost to level {tower.hero.level + 1}?\nYou will gain a debt of ${tower.hero.costToLevelUp:N0}",
                 new Action(() =>
                 {
-                    __instance.Bridge.UpgradeHeroToLevel(tower.Id, new Action<bool>(_ => { }), tower.hero.level + 1);
+                    __instance.Bridge.UpgradeHeroToLevel(__instance.Bridge.GetInputId(), tower.Id,
+                        new Action<bool>(_ => { }), tower.hero.level + 1);
 
                     __instance.Bridge.Simulation.AddBehavior<ImfLoanCollection>(
                         ImfLoanCollectionModel.Create(new()

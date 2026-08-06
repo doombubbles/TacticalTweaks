@@ -5,6 +5,7 @@ using HarmonyLib;
 using Il2CppAssets.Scripts.Simulation;
 using Il2CppAssets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors;
 using Il2CppAssets.Scripts.Simulation.Towers.Weapons;
+using Il2CppSystem.IO;
 
 namespace TacticalTweaks.Tweaks;
 
@@ -32,13 +33,13 @@ public class AutoBloonTrapRetarget : TacticalTweak
         {
             if (AutoTrapRetarget != TrapRetargetSetting.StartOfRound) return;
 
-            __instance.factory.GetUncast<TargetSelectedPoint>().ForEach(point =>
+            foreach (var point in __instance.factory.Get<TargetSelectedPoint>().ToArray())
             {
                 if (point.attack.model.name.Contains("BloonTrap") && point.HasValidPoint)
                 {
                     point.ApplyTargetTypeData(point.targetPoint.ToVector2());
                 }
-            });
+            }
         }
     }
 

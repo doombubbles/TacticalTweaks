@@ -141,7 +141,7 @@ public class BuffableParagons : ToggleableTweak
         {
             if (!GetInstance<BuffableParagons>().Enabled) return;
 
-            __state = InGame.Bridge.Simulation.factory.GetUncast<Tower>()
+            __state = InGame.Bridge.Simulation.factory.Get<Tower>()
                 .ToArray()
                 .Where(tower => tower.towerModel.isParagon)
                 .ToArray();
